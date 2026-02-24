@@ -3,7 +3,7 @@ import requests
 
 WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
-API_KEY = '45a288f59dbf6bba49e4e5a922fb342d'
+API_KEY = ''
 
 
 class WeatherModel:
