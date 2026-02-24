@@ -47,7 +47,6 @@ class HolidayAPI:
 
         else:
             print("Ошибка:", res.status_code)
-            return None
 
 
 if __name__ == "__main__":

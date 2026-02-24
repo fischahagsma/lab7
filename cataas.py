@@ -4,13 +4,16 @@ from PIL import Image, ImageTk
 from io import BytesIO
 
 URL = "https://cataas.com/cat"
+WINDOW_WIDTH = 500
+WINDOW_HEIGHT = 500
+
 
 class CatGenerator:
 
     def __init__(self, root, url=URL):
         self.root = root
         self.root.title("Генератор котов")
-        self.root.geometry("500x500")
+        self.root.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
         self.url = url
         self.label = tk.Label(root)
         self.label.pack(pady=10)
@@ -30,7 +33,7 @@ class CatGenerator:
             response = requests.get(self.url)
             image_data = response.content
             image = Image.open(BytesIO(image_data))
-            image = image.resize((400, 400))
+            image = image.resize((WINDOW_WIDTH - 100, WINDOW_WIDTH - 100))
             self.photo = ImageTk.PhotoImage(image)
             self.label.config(image=self.photo)
 
