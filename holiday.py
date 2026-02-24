@@ -1,7 +1,7 @@
 import requests
 
 
-API_KEY = "be8ac074-0dae-47e7-939d-9ca141937053"
+API_KEY = ""
 URL = "https://www.holidayapi.com/v1/holidays"
 
 
